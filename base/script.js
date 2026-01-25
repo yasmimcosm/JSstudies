@@ -45,3 +45,10 @@ const podeDirigir = maiorDeIdade && possuiCNH; // AND
 const podeViajarSozinha = maiorDeIdade || possuiCNH; // OR
 const precisaDeAcompanhante = !maiorDeIdade; // NOT
 console.log('Pode dirigir?', podeDirigir);
+
+idade >= 18 ? console.log('maior de idade') : console.log('menor de idade')
+
+notaDoAluno >= 9 ? console.log('excelente'):
+    notaDoAluno >= 7 ? console.log('boa') :
+        notaDoAluno >= 4 ? console.log('mediana') :
+            console.log('ruim')
