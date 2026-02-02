@@ -8,9 +8,8 @@
     function iniciar() {
         leitor.question('Digite o número de questões:\n> ', (questoes) => {
             const total = Number(questoes);
-        
-            leitor.question('Digite o gabarito:\n> ', (gabarito) => {
 
+            leitor.question('Digite o gabarito:\n> ', (gabarito) => {
                 leitor.question('Digite as respostas do candidato:\n> ', (respostas) => {
 
                     if(gabarito.length !== total || respostas.length !== total){
@@ -29,7 +28,6 @@
                     console.log('O candidato obteve ', acertos, 'acertos')
                     leitor.close();
                 });
-
             });
         });
     }
