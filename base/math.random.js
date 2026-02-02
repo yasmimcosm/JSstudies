@@ -11,6 +11,10 @@
         }
     }
 
+
+    // Math.floor() garante que o número seja inteiro.
+
+    
     // O método Math.random() gera um número aleatório entre 0 e 1, 
     // e ao multiplicá-lo por 50 e somar 1, obtemos um número entre 1 e 50. 
     // Englobamos esse código com o método Math.floor() da mesma biblioteca. 
