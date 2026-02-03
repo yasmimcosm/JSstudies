@@ -1,13 +1,6 @@
 
-    function contagemRegressiva (num){
-        if(num === 0){
-            console.log('Lançamento!');
-        } else {
-            console.log(num);
-            num = num - 1;
-            contagemRegressiva(num);
-        }
-    }
+    const livros = ['Dom Casmurro', 'O Cortiço', 'Capitães da Areia', 'Iracema'];
+    const livroProcurado = 'O Cortiço';
 
-    let number = 5;
-    contagemRegressiva(number);
+    const elem = livros.indexOf(livroProcurado);
+    console.log(elem);
