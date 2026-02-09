@@ -16,6 +16,7 @@
                 let j = 1;
                 let atual = 1;
                 let max = 1;
+                let numMax = 0;
 
                 for (j = 1; j < quantidade; j++){
                     if (lista[j] === lista[j-1]){
@@ -24,6 +25,7 @@
 
                     if(atual > max) {
                         max = atual;
+                        numMax = lista[j];
                     }
 
                     if(lista[j] != lista[j-1]){
@@ -32,6 +34,7 @@
                 }
 
                 console.log(max);
+                console.log(numMax);
                 leitor.close();
                 return
 
