@@ -1,52 +1,36 @@
     import { createInterface } from 'readline'
 
-    const leitor = createInterface ({
+    const leitor = createInterface({
         input: process.stdin,
         output: process.stdout
     });
 
-    leitor.question('digita ae:', (numero) => {
-        const quantidade = Number(numero);
+    leitor.question('Escreve ae:\n > ', (quantidade) => {
+        const quant = Number(quantidade);
         let i = 0;
         let lista = [];
 
-        function perguntarNumero() {
+        function contarNum () {
+            if(i >= quant) {
+                let blocos = 1;
 
-            if (i >= quantidade) {
-                let j = 1;
-                let atual = 1;
-                let max = 1;
-                let numMax = 0;
-
-                for (j = 1; j < quantidade; j++){
-                    if (lista[j] === lista[j-1]){
-                        atual++;
-                    }
-
-                    if(atual > max) {
-                        max = atual;
-                        numMax = lista[j];
-                    }
-
-                    if(lista[j] != lista[j-1]){
-                        atual = 1;
+                for(let i = 1; i < quant; i++){
+                    if(lista[i] != lista[i-1]){
+                        blocos++;
                     }
                 }
 
-                console.log(max);
-                console.log(numMax);
+                console.log(blocos);
                 leitor.close();
                 return
-
             }
 
-            leitor.question(`Digite o numero da vez (${i+1}):\n> `, (num) => {
-                lista.push(Number(num));
+            leitor.question(`escreva o num da vez (${i+1}):`, (num) => {
+                lista.push(num);
                 i++;
-                perguntarNumero();
-
+                contarNum();
             })
         }
 
-        perguntarNumero();
+        contarNum()
     })
